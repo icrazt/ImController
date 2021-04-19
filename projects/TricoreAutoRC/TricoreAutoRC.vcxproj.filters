@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="imgui">
+      <UniqueIdentifier>{ae2ae09c-53b4-4c79-90b7-166c331f9cda}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="imgui\gl3w">
+      <UniqueIdentifier>{201eac41-f933-4e35-bf4a-974c13920975}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="imgui\backends">
+      <UniqueIdentifier>{734bde12-de38-4f10-b8b1-0a0f3a056348}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="components">
+      <UniqueIdentifier>{17a36e18-37f4-4964-8734-eb9497cd56ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application">
+      <UniqueIdentifier>{9bbb22c7-175b-42b3-a66d-23205d7a47cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="components\cserial">
+      <UniqueIdentifier>{bff2c32a-a4b0-4a55-8efb-fc442b4d626d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="components\TinyFrame">
+      <UniqueIdentifier>{f149981c-37a6-47e1-878e-9aee629d26b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="components\TinyFrame\utilities">
+      <UniqueIdentifier>{38dca4ba-afbc-434c-a667-65e1bc17ec45}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\imgui\imgui.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\imgui\imgui_demo.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\imgui\imgui_draw.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\imgui\imgui_tables.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\imgui\imgui_widgets.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\gl3w\GL\gl3w.c">
+      <Filter>imgui\gl3w</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\imgui\backends\imgui_impl_glfw.cpp">
+      <Filter>imgui\backends</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\imgui\backends\imgui_impl_opengl3.cpp">
+      <Filter>imgui\backends</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\components\cserial\serial.cpp">
+      <Filter>components\cserial</Filter>
+    </ClCompile>
+    <ClCompile Include="application\tinyframe_app.cpp">
+      <Filter>application</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\components\TinyFrame\utilities\utils.c">
+      <Filter>components\TinyFrame\utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\components\TinyFrame\utilities\payload_parser.c">
+      <Filter>components\TinyFrame\utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\components\TinyFrame\utilities\payload_builder.c">
+      <Filter>components\TinyFrame\utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\components\TinyFrame\TinyFrame.c">
+      <Filter>components\TinyFrame</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\imgui\imconfig.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\imgui\imgui.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\imgui\imgui_internal.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\gl3w\GL\gl3w.h">
+      <Filter>imgui\gl3w</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\gl3w\GL\glcorearb.h">
+      <Filter>imgui\gl3w</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\imgui\backends\imgui_impl_glfw.h">
+      <Filter>imgui\backends</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\imgui\backends\imgui_impl_opengl3.h">
+      <Filter>imgui\backends</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\components\cserial\serial.h">
+      <Filter>components\cserial</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\components\TinyFrame\TF_Config.h">
+      <Filter>components\TinyFrame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\components\TinyFrame\TinyFrame.h">
+      <Filter>components\TinyFrame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\components\TinyFrame\utilities\payload_builder.h">
+      <Filter>components\TinyFrame\utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\components\TinyFrame\utilities\payload_parser.h">
+      <Filter>components\TinyFrame\utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\components\TinyFrame\utilities\type_coerce.h">
+      <Filter>components\TinyFrame\utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\components\TinyFrame\utilities\utils.h">
+      <Filter>components\TinyFrame\utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="application\tinyframe_app.h">
+      <Filter>application</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
