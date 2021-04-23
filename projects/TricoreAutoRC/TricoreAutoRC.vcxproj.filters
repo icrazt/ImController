@@ -29,6 +29,9 @@
     <Filter Include="components\TinyFrame\utilities">
       <UniqueIdentifier>{38dca4ba-afbc-434c-a667-65e1bc17ec45}</UniqueIdentifier>
     </Filter>
+    <Filter Include="components\websocketpp">
+      <UniqueIdentifier>{5f301a2d-fd37-4151-9fe4-3fc0bd7a2fc0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -122,6 +125,45 @@
     </ClInclude>
     <ClInclude Include="application\tinyframe_app.h">
       <Filter>application</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\components\websocketpp\client.hpp">
+      <Filter>components\websocketpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\components\websocketpp\close.hpp">
+      <Filter>components\websocketpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\components\websocketpp\connection.hpp">
+      <Filter>components\websocketpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\components\websocketpp\connection_base.hpp">
+      <Filter>components\websocketpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\components\websocketpp\endpoint.hpp">
+      <Filter>components\websocketpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\components\websocketpp\endpoint_base.hpp">
+      <Filter>components\websocketpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\components\websocketpp\error.hpp">
+      <Filter>components\websocketpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\components\websocketpp\frame.hpp">
+      <Filter>components\websocketpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\components\websocketpp\server.hpp">
+      <Filter>components\websocketpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\components\websocketpp\uri.hpp">
+      <Filter>components\websocketpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\components\websocketpp\utf8_validator.hpp">
+      <Filter>components\websocketpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\components\websocketpp\utilities.hpp">
+      <Filter>components\websocketpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\components\websocketpp\version.hpp">
+      <Filter>components\websocketpp</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

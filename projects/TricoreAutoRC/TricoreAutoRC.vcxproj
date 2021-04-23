@@ -90,7 +90,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\..\components\TinyFrame\utilities;..\..\components\TinyFrame;..\..\components\cserial;..\..\imgui\backends;..\..\imgui;..\libs\gl3w;..\libs\glfw\include;application;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\components\websocketpp;..\..\components\TinyFrame\utilities;..\..\components\TinyFrame;..\..\components\cserial;..\..\imgui\backends;..\..\imgui;..\libs\gl3w;..\libs\glfw\include;application;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -168,6 +168,19 @@
     <ClInclude Include="..\..\components\TinyFrame\utilities\payload_parser.h" />
     <ClInclude Include="..\..\components\TinyFrame\utilities\type_coerce.h" />
     <ClInclude Include="..\..\components\TinyFrame\utilities\utils.h" />
+    <ClInclude Include="..\..\components\websocketpp\client.hpp" />
+    <ClInclude Include="..\..\components\websocketpp\close.hpp" />
+    <ClInclude Include="..\..\components\websocketpp\connection.hpp" />
+    <ClInclude Include="..\..\components\websocketpp\connection_base.hpp" />
+    <ClInclude Include="..\..\components\websocketpp\endpoint.hpp" />
+    <ClInclude Include="..\..\components\websocketpp\endpoint_base.hpp" />
+    <ClInclude Include="..\..\components\websocketpp\error.hpp" />
+    <ClInclude Include="..\..\components\websocketpp\frame.hpp" />
+    <ClInclude Include="..\..\components\websocketpp\server.hpp" />
+    <ClInclude Include="..\..\components\websocketpp\uri.hpp" />
+    <ClInclude Include="..\..\components\websocketpp\utf8_validator.hpp" />
+    <ClInclude Include="..\..\components\websocketpp\utilities.hpp" />
+    <ClInclude Include="..\..\components\websocketpp\version.hpp" />
     <ClInclude Include="..\..\imgui\backends\imgui_impl_glfw.h" />
     <ClInclude Include="..\..\imgui\backends\imgui_impl_opengl3.h" />
     <ClInclude Include="..\..\imgui\imconfig.h" />
