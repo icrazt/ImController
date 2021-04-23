@@ -88,9 +88,9 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_WEBSOCKETPP_CPP11_TYPE_TRAITS_;ASIO_STANDALONE;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\..\components\websocketpp;..\..\components\TinyFrame\utilities;..\..\components\TinyFrame;..\..\components\cserial;..\..\imgui\backends;..\..\imgui;..\libs\gl3w;..\libs\glfw\include;application;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\components;..\..\components\TinyFrame\utilities;..\..\components\TinyFrame;..\..\components\cserial;..\..\imgui\backends;..\..\imgui;..\libs\asio\include;..\libs\gl3w;..\libs\glfw\include;application;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -158,6 +158,7 @@
     <ClCompile Include="..\..\imgui\imgui_widgets.cpp" />
     <ClCompile Include="..\libs\gl3w\GL\gl3w.c" />
     <ClCompile Include="application\tinyframe_app.cpp" />
+    <ClCompile Include="application\websocketpp_app.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -189,6 +190,7 @@
     <ClInclude Include="..\libs\gl3w\GL\gl3w.h" />
     <ClInclude Include="..\libs\gl3w\GL\glcorearb.h" />
     <ClInclude Include="application\tinyframe_app.h" />
+    <ClInclude Include="application\websocketpp_app.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

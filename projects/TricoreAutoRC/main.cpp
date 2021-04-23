@@ -7,6 +7,7 @@
 #include "imgui_impl_glfw.h"
 #include "imgui_impl_opengl3.h"
 #include <stdio.h>
+#include <thread>
 
 #if defined(IMGUI_IMPL_OPENGL_ES2)
 #include <GLES2/gl2.h>
@@ -137,7 +138,7 @@ int main(int, char**)
         style.WindowRounding = 0.0f;
         style.Colors[ImGuiCol_WindowBg].w = 1.0f;
     }
-    style.ScaleAllSizes(1.8);
+    style.ScaleAllSizes((float)1.8);
 
     // Setup Platform/Renderer backends
     ImGui_ImplGlfw_InitForOpenGL(window, true);
@@ -165,6 +166,9 @@ int main(int, char**)
     //Crazt TinyFrame Test
     TF_UartInit();
     TinyFrame* tf=TF_AppInit();
+    //Crazt WS test
+#include "websocketpp_app.hpp"
+    std::thread thread1(ws_echo_server);
 
     // Main loop
     while (!glfwWindowShouldClose(window))

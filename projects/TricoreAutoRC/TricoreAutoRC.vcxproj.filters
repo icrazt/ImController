@@ -79,6 +79,9 @@
     <ClCompile Include="..\..\components\TinyFrame\TinyFrame.c">
       <Filter>components\TinyFrame</Filter>
     </ClCompile>
+    <ClCompile Include="application\websocketpp_app.cpp">
+      <Filter>application</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\imgui\imconfig.h">
@@ -164,6 +167,9 @@
     </ClInclude>
     <ClInclude Include="..\..\components\websocketpp\version.hpp">
       <Filter>components\websocketpp</Filter>
+    </ClInclude>
+    <ClInclude Include="application\websocketpp_app.hpp">
+      <Filter>application</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
