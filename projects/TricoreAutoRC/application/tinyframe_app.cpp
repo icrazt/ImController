@@ -1,5 +1,4 @@
 #include "tinyframe_app.h"
-#include "serial.h"
 #include "stdio.h"
 
 CSerial SerialHandle;
@@ -20,11 +19,11 @@ void TF_UartRead(TinyFrame* tf)
     }
 }
 
-void TF_WriteImpl(TinyFrame* tf, const uint8_t* buff, uint32_t len)
-{
-    // send to UART
-    SerialHandle.Open(5, 115200);
-}
+//void TF_WriteImpl(TinyFrame* tf, const uint8_t* buff, uint32_t len)
+//{
+//    // send to UART
+//    SerialHandle.Open(5, 115200);
+//}
 
 TF_Result testListener(TinyFrame* tf, TF_Msg* msg)
 {

@@ -82,6 +82,9 @@
     <ClCompile Include="application\websocketpp_app.cpp">
       <Filter>application</Filter>
     </ClCompile>
+    <ClCompile Include="autorc.cpp">
+      <Filter>application</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\imgui\imconfig.h">
@@ -169,6 +172,12 @@
       <Filter>components\websocketpp</Filter>
     </ClInclude>
     <ClInclude Include="application\websocketpp_app.hpp">
+      <Filter>application</Filter>
+    </ClInclude>
+    <ClInclude Include="application\imc_data.hpp">
+      <Filter>application</Filter>
+    </ClInclude>
+    <ClInclude Include="autorc.h">
       <Filter>application</Filter>
     </ClInclude>
   </ItemGroup>

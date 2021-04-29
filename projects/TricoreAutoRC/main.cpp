@@ -2,12 +2,14 @@
 // (GLFW is a cross-platform general purpose library for handling windows, inputs, OpenGL/Vulkan/Metal graphics context creation, etc.)
 // If you are new to Dear ImGui, read documentation from the docs/ folder + read the top of imgui.cpp.
 // Read online: https://github.com/ocornut/imgui/tree/master/docs
+#include <stdio.h>
+#include <thread>
 
 #include "imgui.h"
 #include "imgui_impl_glfw.h"
 #include "imgui_impl_opengl3.h"
-#include <stdio.h>
-#include <thread>
+
+#include "imc_data.hpp"
 
 #if defined(IMGUI_IMPL_OPENGL_ES2)
 #include <GLES2/gl2.h>
@@ -121,7 +123,7 @@ int main(int, char**)
     ImGui::CreateContext();
     ImGuiIO& io = ImGui::GetIO(); (void)io;
     io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;       // Enable Keyboard Controls
-    //io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;      // Enable Gamepad Controls
+    io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;      // Enable Gamepad Controls
     io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;           // Enable Docking
     io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable;         // Enable Multi-Viewport / Platform Windows
     //io.ConfigViewportsNoAutoMerge = true;
@@ -166,14 +168,21 @@ int main(int, char**)
     //Crazt TinyFrame Test
     TF_UartInit();
     TinyFrame* tf=TF_AppInit();
+    imcdata.tf_handle = tf;
     //Crazt WS test
 #include "websocketpp_app.hpp"
-    std::thread thread1(ws_echo_server);
-
+    std::thread thread1(ws_echo_server); 
     // Main loop
     while (!glfwWindowShouldClose(window))
     {
+        if (glfwGetTime() - imcdata.time_stamp > 0.1)
+        {
+            imcdata.time_stamp = glfwGetTime();
+            imcdata.transmit();
+        }
+        //TF Uart Implemention
         TF_UartRead(tf);
+
         // Poll and handle events (inputs, window resize, etc.)
         // You can read the io.WantCaptureMouse, io.WantCaptureKeyboard flags to tell if dear imgui wants to use your inputs.
         // - When io.WantCaptureMouse is true, do not dispatch mouse input data to your main application.
@@ -220,6 +229,12 @@ int main(int, char**)
             ImGui::Text("Hello from another window!");
             if (ImGui::Button("Close Me"))
                 show_another_window = false;
+            
+            ImGui::SliderFloat("left" , &imcdata.XBOX_Ctl[0], -1.0f, 1.0f, "ratio = %.3f");
+            ImGui::SliderFloat("right", &imcdata.XBOX_Ctl[1], -1.0f, 1.0f, "ratio = %.3f");
+            /*ImGui::Text("value = %f", imcdata.XBOX_Ctl[0]);
+            ImGui::Text("value = %f", imcdata.XBOX_Ctl[1]);*/
+
             ImGui::End();
         }
 

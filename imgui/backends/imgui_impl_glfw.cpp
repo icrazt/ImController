@@ -404,7 +404,7 @@ static void ImGui_ImplGlfw_UpdateMouseCursor()
         }
     }
 }
-
+#include "imc_data.hpp"
 static void ImGui_ImplGlfw_UpdateGamepads()
 {
     ImGuiIO& io = ImGui::GetIO();
@@ -428,14 +428,20 @@ static void ImGui_ImplGlfw_UpdateGamepads()
     MAP_BUTTON(ImGuiNavInput_DpadDown,   12);    // D-Pad Down
     MAP_BUTTON(ImGuiNavInput_FocusPrev,  4);     // L1 / LB
     MAP_BUTTON(ImGuiNavInput_FocusNext,  5);     // R1 / RB
-    MAP_BUTTON(ImGuiNavInput_TweakSlow,  4);     // L1 / LB
-    MAP_BUTTON(ImGuiNavInput_TweakFast,  5);     // R1 / RB
+    MAP_BUTTON(ImGuiNavInput_TweakSlow,  6);     // L1 / LB
+    MAP_BUTTON(ImGuiNavInput_TweakFast,  7);     // R1 / RB
     MAP_ANALOG(ImGuiNavInput_LStickLeft, 0,  -0.3f,  -0.9f);
     MAP_ANALOG(ImGuiNavInput_LStickRight,0,  +0.3f,  +0.9f);
     MAP_ANALOG(ImGuiNavInput_LStickUp,   1,  +0.3f,  +0.9f);
     MAP_ANALOG(ImGuiNavInput_LStickDown, 1,  -0.3f,  -0.9f);
+    
     #undef MAP_BUTTON
     #undef MAP_ANALOG
+    //Crazt customs define
+    #define MAP_CUSTOM_ANALOG(NAV_NO, AXIS_NO, V0, V1) { float v = (axes_count > AXIS_NO) ? axes[AXIS_NO] : V0;    imcdata.XBOX_Ctl[NAV_NO]  = v; }
+    MAP_CUSTOM_ANALOG(0, 2, +0.3f, +0.9f);
+    MAP_CUSTOM_ANALOG(1, 3, +0.3f, +0.9f);
+    #undef MAP_CUSTOM_ANALOG
     if (axes_count > 0 && buttons_count > 0)
         io.BackendFlags |= ImGuiBackendFlags_HasGamepad;
     else
