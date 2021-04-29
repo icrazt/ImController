@@ -156,6 +156,9 @@
     <ClCompile Include="..\..\imgui\imgui_draw.cpp" />
     <ClCompile Include="..\..\imgui\imgui_tables.cpp" />
     <ClCompile Include="..\..\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="..\..\imgui\implot.cpp" />
+    <ClCompile Include="..\..\imgui\implot_demo.cpp" />
+    <ClCompile Include="..\..\imgui\implot_items.cpp" />
     <ClCompile Include="..\libs\gl3w\GL\gl3w.c" />
     <ClCompile Include="application\tinyframe_app.cpp" />
     <ClCompile Include="application\websocketpp_app.cpp" />
@@ -188,6 +191,8 @@
     <ClInclude Include="..\..\imgui\imconfig.h" />
     <ClInclude Include="..\..\imgui\imgui.h" />
     <ClInclude Include="..\..\imgui\imgui_internal.h" />
+    <ClInclude Include="..\..\imgui\implot.h" />
+    <ClInclude Include="..\..\imgui\implot_internal.h" />
     <ClInclude Include="..\libs\gl3w\GL\gl3w.h" />
     <ClInclude Include="..\libs\gl3w\GL\glcorearb.h" />
     <ClInclude Include="application\imc_data.hpp" />
