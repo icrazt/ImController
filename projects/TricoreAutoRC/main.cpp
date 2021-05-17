@@ -11,6 +11,7 @@
 #include "implot.h"
 
 #include "imc_data.hpp"
+#include "autorc.h"
 
 #if defined(IMGUI_IMPL_OPENGL_ES2)
 #include <GLES2/gl2.h>
@@ -177,14 +178,14 @@ int main(int, char**)
     // Main loop
     while (!glfwWindowShouldClose(window))
     {
+        //Periodly transmit data
         if (glfwGetTime() - imcdata.time_stamp > 0.1)
         {
             imcdata.time_stamp = glfwGetTime();
             imcdata.transmit();
         }
         //TF Uart Implemention
-        TF_UartRead(tf);
-
+        //TF_UartRead(tf);
         // Poll and handle events (inputs, window resize, etc.)
         // You can read the io.WantCaptureMouse, io.WantCaptureKeyboard flags to tell if dear imgui wants to use your inputs.
         // - When io.WantCaptureMouse is true, do not dispatch mouse input data to your main application.
@@ -206,7 +207,7 @@ int main(int, char**)
             ImPlot::ShowDemoWindow(&show_implot_demo_window);
             ImPlot::DestroyContext();
         }
-        
+        AutoRC_DataPlot();
 
         // 2. Show a simple window that we create ourselves. We use a Begin/End pair to created a named window.
         {
@@ -227,6 +228,7 @@ int main(int, char**)
                 counter++;
             ImGui::SameLine();
             ImGui::Text("counter = %d", counter);
+            ImGui::Text("RT Systick=%f", AutoCurrentStatus.systick);
 
             ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
             ImGui::End();

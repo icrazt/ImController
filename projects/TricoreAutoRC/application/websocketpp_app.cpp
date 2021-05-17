@@ -18,7 +18,7 @@ IMC_DataClass imcdata;
 // Create a server endpoint
 server echo_server;
 
-bool       ws_target_connection = false;
+bool ws_target_connection = false;
 websocketpp::connection_hdl client_hdl;
 
 // Echo Server ,Used for connection test.
@@ -54,10 +54,9 @@ void TF_WriteImpl(TinyFrame* tf, const uint8_t* buff, uint32_t len)
 void on_message(server* s, websocketpp::connection_hdl hdl, message_ptr msg) {
     ws_target_connection = true;
     client_hdl = hdl;
-    std::cout << "on_message called with hdl: " << hdl.lock().get()
-        << std::endl;
+    //std::cout << "on_message called with hdl: " << hdl.lock().get()<< std::endl;
     imcdata.receive(msg->get_raw_payload());
-    printf("receive msg:\n");
+    //printf("receive msg:\n");
     
 }
 

@@ -12,4 +12,5 @@ extern "C" {
 void TF_UartInit(void);
 void TF_UartRead(TinyFrame* tf);
 TinyFrame* TF_AppInit(void);
+bool pb_full_cb(PayloadBuilder* pb, uint32_t needed);
 

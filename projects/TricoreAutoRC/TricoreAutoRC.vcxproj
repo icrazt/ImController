@@ -160,9 +160,9 @@
     <ClCompile Include="..\..\imgui\implot_demo.cpp" />
     <ClCompile Include="..\..\imgui\implot_items.cpp" />
     <ClCompile Include="..\libs\gl3w\GL\gl3w.c" />
+    <ClCompile Include="application\autorc.cpp" />
     <ClCompile Include="application\tinyframe_app.cpp" />
     <ClCompile Include="application\websocketpp_app.cpp" />
-    <ClCompile Include="autorc.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -195,10 +195,10 @@
     <ClInclude Include="..\..\imgui\implot_internal.h" />
     <ClInclude Include="..\libs\gl3w\GL\gl3w.h" />
     <ClInclude Include="..\libs\gl3w\GL\glcorearb.h" />
+    <ClInclude Include="application\autorc.h" />
     <ClInclude Include="application\imc_data.hpp" />
     <ClInclude Include="application\tinyframe_app.h" />
     <ClInclude Include="application\websocketpp_app.hpp" />
-    <ClInclude Include="autorc.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

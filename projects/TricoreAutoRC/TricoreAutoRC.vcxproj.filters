@@ -82,9 +82,6 @@
     <ClCompile Include="application\websocketpp_app.cpp">
       <Filter>application</Filter>
     </ClCompile>
-    <ClCompile Include="autorc.cpp">
-      <Filter>application</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\imgui\implot.cpp">
       <Filter>imgui</Filter>
     </ClCompile>
@@ -93,6 +90,9 @@
     </ClCompile>
     <ClCompile Include="..\..\imgui\implot_items.cpp">
       <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="application\autorc.cpp">
+      <Filter>application</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -186,14 +186,14 @@
     <ClInclude Include="application\imc_data.hpp">
       <Filter>application</Filter>
     </ClInclude>
-    <ClInclude Include="autorc.h">
-      <Filter>application</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\imgui\implot.h">
       <Filter>imgui</Filter>
     </ClInclude>
     <ClInclude Include="..\..\imgui\implot_internal.h">
       <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="application\autorc.h">
+      <Filter>application</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
